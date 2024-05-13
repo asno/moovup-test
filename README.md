@@ -1,6 +1,9 @@
 # geo-contacts-fe
-
-Geo-contacts is a single-page web application (SPA) that allows users to see a list of contacts and visualize their locations on a map.
+![Screenshot of the app ran on a computer web browser](screenshot.png)
+**Geo-contacts** is a single-page web application (SPA) that displays a scrollable list of contacts alongside a navigable 2D world map.
+Click on a contact card to reveal the contact's email address.
+Utilize the "Copy Email" button to copy the email address to the clipboard.
+Use the "Geolocate" button to pinpoint the contact's location on the map.
 
 ## Technologies Used
 
@@ -8,9 +11,9 @@ Geo-contacts is a single-page web application (SPA) that allows users to see a l
 - Typescript
 - Pinia
 - Vite
-- Bootstrap 5
-- Popper.js
-- Vue-Axios
+- Vitest
+- Prettier
+- Axios
 - Leaflet
 
 ## Project Setup
@@ -62,8 +65,8 @@ docker-compose up vueapp-prod nginx-prod --build
 yarn test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Formatting with Prettier
 
 ```bash
-yarn lint
+yarn prettier:write
 ```

@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: cd geo-contacts-fe && npm install
+
+    - name: Code formatting check
+      run: cd geo-contacts-fe && npm run prettier:check
+
+    - name: Run unit tests
+      run: cd geo-contacts-fe && npm run test:unit
+
+    - name: Build the code
+      run: cd geo-contacts-fe && npm run build
